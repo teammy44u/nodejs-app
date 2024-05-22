@@ -2,7 +2,7 @@ pipeline{
     agent any
     stages{
         stage('dependency install'){
-            agent { docker { image 'node:14'
+            agent { any { image 'node:14'
             args '-u root:root'}}
             steps{
             //    sh 'sudo chown -R 995:993 "/.npn"'
